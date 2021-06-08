@@ -65,6 +65,7 @@
 						<div class="crimes">
 							[[Mug the vulnerable-looking pedestrian|Mugging1-1]]
 							[[Break into the apartment with an open window|Burglary1-1]]
+							[[Steal from the corner store|Theft1-1]]
 						</div>
 					</tw-passagedata>
 					<tw-passagedata pid="10" name="Mugging1-1" tags="" position="0,100" size="100,100">
@@ -120,7 +121,28 @@
 						<span class="next">[[Next|ChoiceIntro2]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="23" name="Theft1-1" tags="" position="1300,100" size="100,100">
-						Double-click this passage to edit it.
+						<div class="script">You grab a brick and a large stick that were both laying on the side of the road and take a deep breath before kicking the corner store door open.</div>
+						<span class="next">[[Next|Theft1-2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="24" name="Theft1-2" tags="" position="1400,100" size="100,100">
+						<div class="script">The one elderly lady shopping immediately drops to the ground and you have to stop yourself from the instinct to check on her. Instead, you focus on the man behind the counter.</div>
+						<span class="next">[[Next|Theft1-3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="25" name="Theft1-3" tags="" position="1500,100" size="100,100">
+						<div class="script">It's not difficult to yank his attention away from trying to hit the button under the counter. One aggressive yell and his hands fly into the air above his head.</div>
+						<span class="next">[[Next|Theft1-4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="26" name="Theft1-4" tags="" position="1600,100" size="100,100">
+						<div class="script">The cam-drones whirr near your ears as the poor man cracks the safe open, shaking violently in fear. You have to swallow the tinges of red growing on the corners of your vision..</div>
+						<span class="next">[[Next|Theft1-5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="27" name="Theft1-5" tags="" position="1700,100" size="100,100">
+						<div class="script">You grab a brick and a large stick that were both laying on the side of the road and take a deep breath before kicking the corner store door open.</div>
+						<span class="next">[[Next|Theft1-6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="28" name="Theft1-6" tags="" position="1800,100" size="100,100">
+						<div class="script">You throw the brick at the display behind him and yank the pile of money off the counter while he's covering his head. The lady is still crouched in the corner as you tear out the door and run down the street before ducking into an alley to catch your breath and stash the cash.</div>
+						<span class="next">[[Next|ChoiceIntro2]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="30" name="ChoiceIntro2" tags="" position="0,200" size="100,100">
 						<div class="script">Stepping out to the quiet street, still breathing heavily, you look about for your next course of action.</div>
@@ -198,6 +220,7 @@
 						<div class="crimes">
 							[[Mug the rich couple chatting over a stroller|Mugging3-1]]
 							[[Break into the tech shop|Burglary3-1]]
+							[[Hold up jewelry store|Theft3-1]]
 						</div>
 					</tw-passagedata>
 					<tw-passagedata pid="46" name="Mugging3-1" tags="" position="0,400" size="100,100">
@@ -237,46 +260,60 @@
 						<span class="next">[[Next|Outro1]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="55" name="Theft3-1" tags="" position="900,400" size="100,100">
-						Double-click this passage to edit it.
+						<div class="script">You pick up a rusted pipe on the side of the road and hide it as you walk past the couple. They don't seem to notice you, deeply engaged in some kind of romantic discussion that makes a wave of jealousy run through you.</div>
+						<span class="next">[[Next|Theft3-2]]</span>
 					</tw-passagedata>
-
-					<tw-passagedata pid="60" name="Outro1" tags="" position="0,500" size="100,100">
-						<span class="hidden"><% s.speaker = true %></span>
+					<tw-passagedata pid="56" name="Theft3-2" tags="" position="900,400" size="100,100">
+						<div class="script">Instead of kicking the door open like you have an urge to, you stash the pipe behind your back and walk in politely. Almost as though you were intending to actually buy something.</div>
+						<span class="next">[[Next|Theft3-3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="57" name="Theft3-3" tags="" position="900,400" size="100,100">
+						<div class="script">There's an attendant behind the counter who starts to ask you something when a figure moves to your immediate left. You turn, and see another attendant raising his arm. SHIT.</div>
+						<span class="next">[[Next|Theft3-4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="58" name="Theft3-4" tags="" position="900,400" size="100,100">
+						<div class="script">Instinctively, you swing the pipe. It cracks against the attendant's forearm and he drops it with a yell. You freeze for a second as the other attendant yells, then kick the one near you towards the wall. He crumples to the ground, grasping his arm.</div>
+						<span class="next">[[Next|Theft3-5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="59" name="Theft3-5" tags="" position="900,400" size="100,100">
+						<div class="script">An alarm begins blaring, and you turn to see the other attendant freeze with his hand under the counter. Panicking, you throw the pipe and hit him square in the forehead. He drops out of view.</div>
+						<span class="next">[[Next|Theft3-6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="60" name="Theft3-6" tags="" position="900,400" size="100,100">
+						<div class="script">The panic begins to hit a peak as the flashing lights and blaring whine assault your senses. Pulling your sleeve over your hand, you bash a couple displays and grab handfuls of expensive-looking things before booking it.</div>
+						<span class="next">[[Next|Outro1]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="61" name="Outro1" tags="" position="0,500" size="100,100">
 						<div class="announcer">And there you have it! Looks like our contestant is holding back a bit, but hanging on!</div>
 						<img class="reggie" src="reggie.png" />
 						<span class="next">[[Next|Outro2]]</span>
 					</tw-passagedata>
-					<tw-passagedata pid="61" name="Outro2" tags="" position="100,500" size="100,100">
-						<span class="hidden"><% s.speaker = true %></span>
+					<tw-passagedata pid="62" name="Outro2" tags="" position="100,500" size="100,100">
 						<div class="announcer">Just about thought they were about to fail when that hunter showed up, but it looks like they got some wits.</div>
 						<img class="chuck" src="chuck.png" />
 						<span class="next">[[Next|Outro3]]</span>
 					</tw-passagedata>
-					<tw-passagedata pid="62" name="Outro3" tags="" position="200,500" size="100,100">
-						<span class="hidden"><% s.speaker = true %></span>
+					<tw-passagedata pid="63" name="Outro3" tags="" position="200,500" size="100,100">
 						<div class="announcer">They're performing pretty well, but I suspect they'll have to take a few more drastic risks in the next round if they REALLY want to perform.</div>
 						<img class="reggie" src="reggie.png" />
 						<span class="next">[[Next|Outro4]]</span>
 					</tw-passagedata>
-					<tw-passagedata pid="63" name="Outro4" tags="" position="300,500" size="100,100">
-						<span class="hidden"><% s.speaker = true %></span>
+					<tw-passagedata pid="64" name="Outro4" tags="" position="300,500" size="100,100">
 						<div class="announcer">Definitely, definitely. I'll be honest though, things have been a little boring so far.</div>
 						<img class="chuck" src="chuck.png" />
 						<span class="next">[[Next|Outro5]]</span>
 					</tw-passagedata>
-					<tw-passagedata pid="64" name="Outro5" tags="" position="400,500" size="100,100">
-						<span class="hidden"><% s.speaker = true %></span>
+					<tw-passagedata pid="65" name="Outro5" tags="" position="400,500" size="100,100">
 						<div class="announcer">Haha! Now, now, cool your thrusters, grump'ums! I mean, they might just be waiting until the end to really pull out the stops!</div>
 						<img class="reggie" src="reggie.png" />
 						<span class="next">[[Next|Outro6]]</span>
 					</tw-passagedata>
-					<tw-passagedata pid="65" name="Outro6" tags="" position="500,500" size="100,100">
-						<span class="hidden"><% s.speaker = true %></span>
+					<tw-passagedata pid="66" name="Outro6" tags="" position="500,500" size="100,100">
 						<div class="announcer">Let's hope so. Join us to find out after these messages from our sponsors!</div>
 						<img class="chuck" src="chuck.png" />
 						<span class="next">[[Next|End]]</span>
 					</tw-passagedata>
-					<tw-passagedata pid="66" name="End" tags="" position="600,500" size="100,100">
+					<tw-passagedata pid="67" name="End" tags="" position="600,500" size="100,100">
 						<div class="script end">Thank you for playing!</div>
 					</tw-passagedata>
 				</tw-storydata>
