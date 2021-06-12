@@ -1,25 +1,38 @@
-//if (crimesOps.length > 0) {
-//  var crimeList = document.getElementsByTagName('a');
-//  console.log(crimeList);
-//
-//  Array.from(crimeList).forEach((crime) => {
-//     console.log(crime);
-//  });
+let speaker = document.getElementById('speaker');
 
-//  console.log(crimeList);
-//  console.log(crimes);
-//}
+let playerLoc = [10, 20];
+let playerLastLoc = [10, 20];
+let ramonLoc = [30, 60];
+let viperLoc = [110, 12];
+
+let playerSpeed = 4;
+let ramonSpeed = 4;
+let viperSpeed = 6;
+
+let bountyTotal = 0;
+
+let dangerInt = 40;
+let dangerLevel = "Low";
+let hasBribed = false;
 
 $(document).on("mousedown", function (event) {
 	$(".next").find('a').trigger("click");
-//  checkSpeaker();
 });
 
-//function checkSpeaker() {
-//  if (speaker) {
-//    document.getElementById('speaker').style.visibility = "visible";
-//  } else {
-//    console.log("speaker goes away");
-//    document.getElementById('speaker').style.visibility = "hidden";
-//  }
-//}
+function checkDistance(point1, point2) {
+	
+}
+
+function checkDanger(distance) {
+	if (distance > 110) {
+		dangerLevel = "Extreme";
+	} else if (distance > 100) {
+		dangerLevel = "High";
+	} else if (distance > 50) {
+		dangerLevel = "Moderate";
+	} else if (distance > 0) {
+		dangerLevel = "Low"
+	} else {
+		console.log("Error: Danger level undefined");
+	}
+}
