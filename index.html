@@ -845,10 +845,10 @@
 					<!--                SECOND ROUND - FIRST SET OF CRIMES             -->
 					<!------------------------------------------------------------------->
 
-					<tw-passagedata pid="500" name="R2Crimes1" tags="" position="40,7" size="100,100">
+					<tw-passagedata pid="500" name="R2Crimes1" tags="" position="0,0" size="100,100">
 						<% currentRound += 1 %><% currentSet += 1 %>
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="MugBruiser">
+							<a href="javascript:void(0)" data-passage="MugBruiser1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Mugging</div>
@@ -870,7 +870,7 @@
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★</div>
 										<div class="crimeTime">1 minute</div>
-										<div class="crimePayout">$50</div>
+										<div class="crimePayout">$250</div>
 									</div>
 								</div>
 							</a>
@@ -888,23 +888,136 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerManager() %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Mugging')) {
+									timeAdjust([40, 7], 3, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('MugBruiser1') }
+								} else if ($(this).text().includes('Theft')) {
+									timeAdjust([46, 18], 1, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('StealTaco1') }
+								} else if ($(this).text().includes('Arson')) {
+									timeAdjust([38, 26], 2, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurnTires1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="501" name="MugBruiser" tags="" position="0,0" size="100,100">
+					<!-- Mug Bruiser -->
+					<tw-passagedata pid="501" name="MugBruiser1" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Looks like a young bruiser thinks he can take on the mean streets all by himself. Our contestant might put his metal to the test!</div>
+						<img class="chuck" src="images/chuck.png" />
+						<span class="next">[[Next|MugBruiser2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="502" name="MugBruiser2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Oh... he’s such a strapping fellow! I do hope nothing too bad happens to him... unless it boosts our ratings, of course!</div>
+						<img class="reggie" src="images/reggie.png" />
+						<span class="next">[[Next|MugBruiser3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="503" name="MugBruiser3" tags="" position="0,0" size="100,100">
+						<div class="script">You approach him from behind, walking casually, but quietly. When you catch up, you pull a pen from your pocket and place it on the back of his neck.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|MugBruiser4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="504" name="MugBruiser4" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 1000 %>
+						<div class="script">Even though it's a bluff, the man recognizes the feel of sharp metal on his neck and simply tells you his wallet is in his back pocket. You take it, kick him in the back of the knees, and run in the opposite direction.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2S1Outro]]</span>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="502" name="StealTaco1" tags="" position="0,0" size="100,100">
+					<!-- Hold up Taco Stand -->
+					<tw-passagedata pid="505" name="StealTaco1" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">What IS it about street food that appeals so much to the masses, Chuck?</div>
+						<img class="reggie" src="images/reggie.png" />
+						<span class="next">[[Next|StealTaco2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="506" name="StealTaco2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Good question, Reggie. I doubt it's the taste, though. It's probably the healthy dose of 'cheap' attached.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<span class="next">[[Next|StealTaco3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="507" name="StealTaco3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Hopefully not TOO healthy of a dose! Our contestant won't get away with much if that's the case!</div>
+						<img class="reggie" src="images/reggie.png" />
+						<span class="next">[[Next|StealTaco4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="508" name="StealTaco4" tags="" position="0,0" size="100,100">
+						<div class="script">The food vendor smiles politely as you approach, and doesn't seem to catch the danger involved for a second. When he spots the cam-drones above your heads, however, that smile fades.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|StealTaco5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="509" name="StealTaco5" tags="" position="0,0" size="100,100">
+						<div class="script">He doesn't put up any fight. You're not sure what most contestants would do, but he seems to think you're capable of anything. He hurriedly places the cashbox and a small pile of food on top of the cart and backs away.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|StealTaco6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="510" name="StealTaco6" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 250 %>
+						<div class="script">The food's a nice bonus, and you can't help but take advantage of it. It's hard not to apologize as you walk away with his earnings.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2S1Outro]]</span>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
+					<!-- Mechanic Shop Arson -->
+					<tw-passagedata pid="511" name="BurnTires1" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Fire! The first ally of man and the great destroyer! Is there anything more primal and yet beautiful?</div>
+						<img class="chuck" src="images/chuck.png" />
+						<span class="next">[[Next|BurnTires2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="512" name="BurnTires2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">That was surprisingly insightful, Chuck. Although, I’m not surprised to see you this jazzed up over fire.</div>
+						<img class="reggie" src="images/reggie.png" />
+						<span class="next">[[Next|BurnTires3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="513" name="BurnTires3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Fire runs in my blood! Ever since my great-great-great whatever - a lot of great-grandaddy Nero had his episode in Rome, we changed the family name and lived up to it.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<span class="next">[[Next|BurnTires4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="514" name="BurnTires4" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Looks like our lovely contestant will have a chance to make you proud!</div>
+						<img class="reggie" src="images/reggie.png" />
+						<span class="next">[[Next|BurnTires5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="515" name="BurnTires5" tags="" position="0,0" size="100,100">
+						<div class="script">It was pure luck that the loading dock for this mechanic’s shop was left open and unattended. Ducking into the shop, you quickly find a lot of rags and some oil cans.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnTires6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="516" name="BurnTires6" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 2000 %>
+						<div class="script">It doesn't take long to combine those with a bit of flame, then scattering them around the shop. You quickly duck out and get moving as black smoke billows behind you.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2S1Outro]]</span>
+					</tw-passagedata>
 
-					<tw-passagedata pid="503" name="BurnTires1" tags="" position="0,0" size="100,100">
+					<!-- Second Round / First Set Outro -->
+					<tw-passagedata pid="517" name="R2S1Outro" tags="" position="0,0" size="100,100">
+						<div class="script">The moral panic is beginning to subside, though that fact alone makes you uncomfortable. You steel yourself to do some more.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R1Crimes3]]</span>
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -954,24 +1067,155 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerManager() %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Hate Speech')) {
+									timeAdjust([59, 14], 2, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('HateSpeech1') }
+								} else if ($(this).text().includes('Vandalism')) {
+									timeAdjust([62, 28], 3, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BreakWindows1') }
+								} else if ($(this).text().includes('Burglary')) {
+									timeAdjust([52, 25], 5, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurgleApartmentAgain1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
+					<!-- Hate Speech -->
 					<tw-passagedata pid="601" name="HateSpeech1" tags="" position="0,0" size="100,100">
+						<div class="script">You feel a little pressed for ideas. You're struggling to think of something when you see a complete stranger who looks different.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|HateSpeech2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="602" name="HateSpeech2" tags="" position="0,0" size="100,100">
+						<div class="script">Struck by inspiration, you yell to get their attention and start barking, just... every hateful thing you can think of. You feel horrible, but they probably feel worse.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|HateSpeech3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="603" name="HateSpeech3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">WOW! I... don’t think we can show that one on TV...</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|HateSpeech4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="604" name="HateSpeech4" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">But they didn’t even DO that much. They just yelled at that person.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|HateSpeech5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="605" name="HateSpeech5" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Hate speech is a crime, Chucks. At least... I think it is. Their feelings look pretty destroyed, at any rate.</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|HateSpeech6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="606" name="HateSpeech6" tags="" position="0,0" size="100,100">
+						<div class="script">The stranger just stands there for a moment, stunned, before shaking their head and walking away. You really hope your daughter wasn't watching that part. THAT'S some vocabulary she does NOT need to know.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|HateSpeech7]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="607" name="HateSpeech7" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 50 %>
+						<div class="script">You shrug your jacket up and look for something better to do. It’s a good thing you’re going to jail after this - plenty of time for people to forget what you just did.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2S1Outro]]</span>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="602" name="BreakWindows1" tags="" position="0,0" size="100,100">
+					<!-- Break Windows -->
+					<tw-passagedata pid="608" name="BreakWindows1" tags="" position="0,0" size="100,100">
+						<div class="script">Struggling to find something to do, your mind wanders... but you still need to raise that bounty. Thankfully, you're struck by inspiration as you kick a stone.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BreakWindows2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="609" name="BreakWindows2" tags="" position="0,0" size="100,100">
+						<div class="script">You pick a stone up, wind up, and launch it directly at the nearest window, shattering glass across the sidewalk and setting off an alarm.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BreakWindows3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="610" name="BreakWindows3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">I hope everyone is wearing shoes! Watch your step!</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BreakWindows4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="611" name="BreakWindows4" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">I... how rude! How is ANYONE supposed to check their reflection there now?!</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BreakWindows5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="612" name="BreakWindows5" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 100 %>
+						<div class="script">You break a few more windows as you move along, racking up... well. It's something.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2S1Outro]]</span>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="603" name="BurgleApartmentAgain1" tags="" position="0,0" size="100,100">
+					<!-- Burgle Apartment -->
+					<tw-passagedata pid="613" name="BurgleApartment1" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Do you smell what I do Reggie? Because I smell... opportunity.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleApartment2]]</span>
 					</tw-passagedata>
+					<tw-passagedata pid="614" name="BurgleApartment2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Aren't areas like this what one might call a “target rich environment”? </div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleApartment3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="615" name="BurgleApartment3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Different context, but the same idea, Regs. Good job.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleApartment4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="616" name="BurgleApartment5" tags="" position="0,0" size="100,100">
+						<div class="script">After scanning the bottom floor of a few residential buildings, you are able to find an cracked window with no one in sight. You remove the prop and slide it up until you can climb inside without much difficulty.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleApartment6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="617" name="BurgleApartment6" tags="" position="0,0" size="100,100">
+						<div class="script">Whomever lives here is not at home and you are able to take your time and search the apartment for anything expensive. There seems to be a drawer in the kitchen full of spare change, and another in the bedroom.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleApartment7]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="618" name="BurgleApartment7" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 6000 %>
+						<div class="script">You wince as a drone bonks into the ceiling fan on the way out, shattering a light bulb. Whoops. At least that one wasn't directly your fault.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R1S1Outro]]</span>
+					</tw-passagedata>
+
+					<!-- Second Round / First Set Outro -->
+					<tw-passagedata pid="617" name="R2S1Outro" tags="" position="0,0" size="100,100">
+						<div class="script">This round didn't feel very good. You've got to come up with something good before this round ends.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R1Crimes3]]</span>
+					</tw-passagedata>
+
 
 					<!------------------------------------------------------------------->
 					<!--                SECOND ROUND - THIRD SET OF CRIMES             -->
@@ -988,7 +1232,7 @@
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★</div>
-										<div class="crimeTime">2 minutes</div>
+										<div class="crimeTime">3 minutes</div>
 										<div class="crimePayout">$200</div>
 									</div>
 								</div>
@@ -1000,9 +1244,9 @@
 										<div class="crimeDesc">The owner of that really nice car is about to change.</div>
 									</div>
 									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
+										<div class="crimeDifficulty">★</div>
+										<div class="crimeTime">3 minutes</div>
+										<div class="crimePayout">$200</div>
 									</div>
 								</div>
 							</a>
@@ -1013,30 +1257,155 @@
 										<div class="crimeDesc">What's funnier than terrifying a few thousand fans?</div>
 									</div>
 									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
+										<div class="crimeDifficulty">★</div>
+										<div class="crimeTime">3 minutes</div>
+										<div class="crimePayout">$200</div>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerManager() %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Mugging')) {
+									timeAdjust([64, 30], 2, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('MugFam1') }
+								} else if ($(this).text().includes('Carjacking')) {
+									timeAdjust([58, 17], 3, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('Carjack1') }
+								} else if ($(this).text().includes('Harassment')) {
+									timeAdjust([60, 27], 5, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BombThreat1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
+					<!-- Mug Family -->
 					<tw-passagedata pid="701" name="MugFam1" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Well, isn’t this a handsome young family... We got Mommy, Daddy and new baby in the bassinet!</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|MugFam2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="702" name="MugFam2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Could be a golden opportunity for our contestant. Most won’t want to put their child in harm's way. OR themselves. Don’t need to be inspiring the next Batman, if you catch my drift.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|MugFam3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="703" name="MugFam3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">HA! I certainly do, Chuck! I wonder if our contestant does, too...</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|MugFam4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="704" name="MugFam4" tags="" position="0,0" size="100,100">
+						<div class="script">You quietly approach the young couple pushing a stroller, picking up a rusted pipe to threaten them with.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|MugFam5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="705" name="MugFam5" tags="" position="0,0" size="100,100">
+						<div class="script">You barely need to open your mouth for them to see you and cower. It doesn't take much convincing for them to hand over their wallets.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|MugFam6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="706" name="MugFam6" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 200 %>
+						<div class="script">You hit the nearby wall with the pipe hard enough for it to crack and start running before they can do anything.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2Interlude1]]</span>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="702" name="Carjack1" tags="" position="0,0" size="100,100">
+					<!-- Carjacking -->
+					<tw-passagedata pid="707" name="Carjack1" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Is there anything more american than a new car? The rumble of the engine and that new car smell?</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Carjack2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="708" name="Carjack2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Taking from the less fortunate?</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Carjack3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="709" name="Carjack3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Well, if they play their cards right, our contestant can experience both at once!</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Carjack4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="710" name="Carjack4" tags="" position="0,0" size="100,100">
+						<div class="script">Your gut tells you the hunters are getting close. You need to put some distance down or this game'll be cut short and you can’t afford that.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Carjack5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="711" name="Carjack5" tags="" position="0,0" size="100,100">
+						<div class="script">You wait for a moment next to a traffic intersection to get your timing right. Then, during a red light, you dash up to a nice car and rip the eldery man out of the front seat.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Carjack6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="712" name="Carjack6" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 200 %>
+						<div class="script">You speed away as he shakes his fist at you from the rearview. You drive around a dozen blocks before pulling off to the side and abandoning the vehicle on the sidewalk. That should be good.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2Interlude1]]</span>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="703" name="BombThreat1" tags="" position="0,0" size="100,100">
+					<!-- Bomb Threat -->
+					<tw-passagedata pid="713" name="BombThreat1" tags="" position="0,0" size="100,100">
+						<div class="script">You get an idea as you pass by the packed stadium and pull your phone out of your pocket.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BombThreat2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="714" name="BombThreat2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Wait, are they... are they just on their phone? Can we get a microphone closer? I’m confused...</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BombThreat3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="715" name="BombThreat3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Wait, I think I know what they're doing! Oh my GOD. That’s DEVIOUS!</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BombThreat4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="716" name="BombThreat4" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">They’re not... doing anythi-- oh GOODNESS! That's a lot of people running! Wh-??</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BombThreat5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="717" name="BombThreat5" tags="" position="0,0" size="100,100">
+						<div class="script">It’s oddly satisfying to watch from a distance as the crowd streams out of the stadium. You slip your generations-old phone back into your pocket and continue on.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BombThreat5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="718" name="BombThreat6" tags="" position="0,0" size="100,100">
+						<% bountyTotal += 200 %>
+						<div class="script">You have to pat yourself on the back for this one. This may be the least effort you’ve actually had to do, and yet it affects more people than all the other “tasks” you’ve completed so far combined.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R2Interlude1]]</span>
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -1215,8 +1584,31 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerManager() %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Burglary')) {
+									timeAdjust([68, 9], 6, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurgleTech1') }
+								} else if ($(this).text().includes('Arson')) {
+									timeAdjust([70, 16], 6, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurnFood1') }
+								} else if ($(this).text().includes('Vandalism')) {
+									timeAdjust([65, 24], 5, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('TrashArt1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
 					<!-- Tech Bruglary -->
@@ -1371,8 +1763,31 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerManager() %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Carjacking')) {
+									timeAdjust([72, 30], 3, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('CarjackAgain1') }
+								} else if ($(this).text().includes('Arson')) {
+									timeAdjust([74, 19], 5, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurnHouse1') }
+								} else if ($(this).text().includes('Robbery')) {
+									timeAdjust([80, 21], 9, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('RobBank1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
 					<!-- Carjacking -->
@@ -1482,8 +1897,31 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerManager() %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Vandalism')) {
+									timeAdjust([88, 13], 8, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('Museum1') }
+								} else if ($(this).text().includes('Arson')) {
+									timeAdjust([95, 28], 6, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurnApartmentAgain1') }
+								} else if ($(this).text().includes('Robbery')) {
+									timeAdjust([96, 2], 7, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('JewelRob1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
@@ -2017,7 +2455,7 @@
 					</tw-passagedata>
 			</div>
 		</div>
-		<script src="js.js"></script>
-		<script src="format.js"></script>
+		<script src="snowman.js"></script>
+		<script src="custom.js"></script>
 	</body>
 </html>
