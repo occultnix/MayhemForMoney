@@ -145,7 +145,7 @@ body {
 #game-window .hunter {
     width: 700px;
     height: 85px;
-    margin-top: 500px;
+    margin-top: 450px;
     margin-left: 35px;
     padding: 5px 15px 10px 15px;
     font-size: 18px;
@@ -155,9 +155,16 @@ body {
     z-index: 99;
 }
 
+#game-window .bountyOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 #game-window .bountyOption a {
-  margin-left: 70px;
-  width: 150px;
+  margin-left: 35px;
+  height: 45px;
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;

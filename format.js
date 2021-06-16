@@ -1,43 +1,64 @@
 let currentRound = 1;
+let currentSet = 2;
 
 let bountyTotal = 0;
 
 let captureChance = 0;
 let dangerLevel = "Low";
-let hasBribed = false;
 
 let playerLoc = [3, 7];
 let playerLastLoc = [3, 7];
-let ramonLoc = [10, 27];
-let viperLoc = [55, 2];
+let chipLoc = [10, 27];
+let ramonLoc = [55, 2];
+let viperLoc = [83, 11];
 
 let playerSpeed = 4;
+let chipSpeed = 3
 let ramonSpeed = 4;
 let viperSpeed = 6;
 
+let chipEncounter = false;
 let ramonEncounter = false;
 let viperEncounter = false;
+
+let bribeSuccess = false;
+let runSuccess = false;
 
 // If the player clicks anywhere on the page, click the link marked "next"
 $(document).on("mousedown", function (event) {
 	$(".next").find('a').trigger("click");
 
 	// If there isn't a link marked "next", find the appropriate link
-	if (ramonEncounter == true) {
+	if (chipEncounter == true) {
+		$(".chip").find('a').trigger("click");
+	} else if (ramonEncounter == true) {
 		$(".ramon").find('a').trigger("click");
 	} else if (viperEncounter == true) {
 		$(".viper").find('a').trigger("click");
+	} else if (bribeSuccess == true) {
+		$(".bribed").find('a').trigger("click");
+	} else if (runSuccess == true) {
+		$(".ran").find('a').trigger("click");
 	} else {
-		$(".safe").find('a').trigger("click");
+		$(".other").find('a').trigger("click");
 	}
 });
 
 // Determine the player's level of danger
 function dangerManager() {
 	// Find the distance between the player and Ramon
-	let shortestDistance = checkDistance(playerLoc, ramonLoc);
+	let shortestDistance = checkDistance(playerLoc, chipLoc);
 
-	// If it's after Round 1, find the distance between the player and Viper
+	// If it's after Round 1, find the distance between the player and Ramon
+	// Find out who the player is closer to
+	if (currentRound > 1) {
+		let currentDanger = checkDistance(playerLoc, ramonLoc);
+		if (currentDanger < shortestDistance) {
+			shortestDistance = currentDanger;
+		}
+	}
+
+	// If it's after Round 2, find the distance between the player and Viper
 	// Find out who the player is closer to
 	if (currentRound > 1) {
 		let currentDanger = checkDistance(playerLoc, viperLoc);
@@ -45,6 +66,7 @@ function dangerManager() {
 			shortestDistance = currentDanger;
 		}
 	}
+
 	return checkDanger(shortestDistance);
 }
 
@@ -84,6 +106,7 @@ function timeAdjust(crimeLoc, crimeTime, doMove) {
 	// If we're just checking, move dummies, not the real characters
 	if (doMove == false) {
 		var tempChar = playerLoc;
+		var tempChip = chipLoc;
 		var tempRamon = ramonLoc;
 		var tempViper = viperLoc;
 
@@ -92,8 +115,10 @@ function timeAdjust(crimeLoc, crimeTime, doMove) {
 			moveChar(tempChar, crimeLoc, playerSpeed);
 
 			// Move the dummy Hunter(s) towards the player's last known position
-			moveChar(tempRamon, playerLastLoc, ramonSpeed);
+			moveChar(tempChip, playerLastLoc, chipSpeed);
 			if (currentRound > 1) {
+				moveChar (tempRamon, playerLastLoc, ramonSpeed);
+			};if (currentRound > 1) {
 				moveChar (tempViper, playerLastLoc, viperSpeed);
 			};
 
@@ -113,8 +138,11 @@ function timeAdjust(crimeLoc, crimeTime, doMove) {
 			moveChar(playerLoc, crimeLoc, playerSpeed);
 
 			// Move the Hunter(s) towards the player's last known position
-			moveChar(ramonLoc, playerLastLoc, ramonSpeed);
+			moveChar(chipLoc, playerLastLoc, chipSpeed);
 			if (currentRound > 1) {
+				moveChar (ramonLoc, playerLastLoc, ramonSpeed);
+			};
+			if (currentRound > 2) {
 				moveChar (viperLoc, playerLastLoc, viperSpeed);
 			};
 
@@ -163,12 +191,16 @@ function dangerDanger(chance) {
 
 	if (chance > rand) {
 		// Find out who's putting the player in danger
+		var chipDist = checkDistance(playerLoc, chipLoc);
 		var ramonDist = checkDistance(playerLoc, ramonLoc);
 		var viperDist = checkDistance(playerLoc, viperLoc);
 		var closest = Math.min(ramonDist, viperDist);
 
 		// Find the appropriate Hunter's encounter page and send the player there
 		switch (closest) {
+			case chipDist:
+				ramonEncounter = true;
+				break;
 			case ramonDist:
 				ramonEncounter = true;
 				break;
@@ -178,5 +210,25 @@ function dangerDanger(chance) {
 		}
 	} else {
 		captureChance += 40;
+	}
+}
+
+function escapeChance(type, chance) {
+	let rand = Math.random() * 100;
+
+	if (chance >= rand) {
+		switch (type) {
+			case 'bribe':
+				bribeSuccess = true;
+				break;
+			case 'run':
+				runSuccess = true;
+				break;
+			default:
+				break;
+		}
+	} else {
+		bribeSuccess = false;
+		runSuccess = false;
 	}
 }
