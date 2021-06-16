@@ -144,14 +144,12 @@
 					</tw-passagedata>
 					<tw-passagedata pid="23" name="Intro23" tags="" position="0,0" size="100,100">
 						<div class="script">A pistol pops off and the roar of the crown reaches a crescendo. Your heart stops beating for a second, then leaps into your throat. The game has begun.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|Intro24]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="24" name="Intro24" tags="" position="0,0" size="100,100">
 						<div class="script">You jerk into movement, running out into the street, a fleet of camera-drones above your head. Looking about the street, you begin running through your options. Where to start, what to do?</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Crimes1]]</span>
 					</tw-passagedata>
 
@@ -161,11 +159,11 @@
 
 					<tw-passagedata pid="100" name="R1Crimes1" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="graffiti">
+							<a href="javascript:void(0)" data-passage="Graffiti1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Graffit</div>
-										<div class="crimeDesc">Deface some buildings</div>
+										<div class="crimeName">Vandalism</div>
+										<div class="crimeDesc">Deface some buildings.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★</div>
@@ -174,11 +172,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="Rob Appartment">
+							<a href="javascript:void(0)" data-passage="BurgleApartment1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Burglary</div>
-										<div class="crimeDesc">Search an appartment for valuables</div>
+										<div class="crimeDesc">Search an appartment for valuables.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★</div>
@@ -187,11 +185,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="Hot Dog Rob">
+							<a href="javascript:void(0)" data-passage="TheftHotDog1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Rob food vendor</div>
-										<div class="crimeDesc">That hotdog stand might have cash</div>
+										<div class="crimeName">Robbery</div>
+										<div class="crimeDesc">That hotdog stand might have cash.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★</div>
@@ -201,23 +199,22 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="101" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="101" name="Graffiti1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="102" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="102" name="BurgleApartment1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="103" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="103" name="TheftHotDog1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -226,11 +223,11 @@
 
 					<tw-passagedata pid="200" name="R1Crimes2" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="Keying Cars">
+							<a href="javascript:void(0)" data-passage="KeyCars1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Keying Cars</div>
-										<div class="crimeDesc">Those cars over there? Fuck 'em</div>
+										<div class="crimeName">Vandalism</div>
+										<div class="crimeDesc">Those rich-ass cars over there? Fuck 'em.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★</div>
@@ -239,11 +236,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="Arson Rest">
+							<a href="javascript:void(0)" data-passage="BurnRestaurant1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Arson</div>
-										<div class="crimeDesc">You bet that grease trap is flamable</div>
+										<div class="crimeDesc">That restaurant's grease trap is DEFINITELY flammable.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★</div>
@@ -252,11 +249,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="Rob Groc">
+							<a href="javascript:void(0)" data-passage="TheftGrocery1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Robbery</div>
-										<div class="crimeDesc">Stick up a Grocery store</div>
+										<div class="crimeDesc">Get the register cash from a grocery store.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★</div>
@@ -266,23 +263,22 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="201" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="201" name="KeyCars1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="202" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="202" name="BurnRestaurant1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="203" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="203" name="TheftGrocery1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -291,24 +287,24 @@
 
 					<tw-passagedata pid="300" name="R1Crimes3" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="steal food">
+							<a href="javascript:void(0)" data-passage="StealFood1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Steal a hotdog </div>
-										<div class="crimeDesc">You're Hungry</div>
+										<div class="crimeName">Theft</div>
+										<div class="crimeDesc">You = Hungry. You + Hot Dog = Not Hungry.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
+										<div class="crimeTime">1 minutes</div>
+										<div class="crimePayout">$50</div>
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="MugWom">
+							<a href="javascript:void(0)" data-passage="MugWoman1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Mugging</div>
-										<div class="crimeDesc">They look like an easy target</div>
+										<div class="crimeDesc">She looks like an easy target.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★</div>
@@ -317,11 +313,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="Arson Arp">
+							<a href="javascript:void(0)" data-passage="BurnApartment1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Arson</div>
-										<div class="crimeDesc">Burn down That appartment building</div>
+										<div class="crimeDesc">Set that apartment building ablaze.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★</div>
@@ -331,23 +327,22 @@
 								</div>
 							</a>
 						</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="301" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="301" name="StealFood1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="302" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="302" name="MugWoman1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="303" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="303" name="BurnApartment1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -356,14 +351,12 @@
 
 					<tw-passagedata pid="400" name="R1Interlude1" tags="" position="0,0" size="100,100">
 						<div class="script">You catch your breath after your last score and prepare to count your cash when you flinch as you're suddenly drenched in blinding light. Shielding your eyes as they adjust, you suddenly find a microphone pushed in your face.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude2]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="401" name="R1Interlude2" tags="" position="0,0" size="100,100">
 						<div class="hunter">And that concludes round one! So far, you’ve completed a handful of crimes and have raised a bounty of <%= bounty %>. How do you feel?</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude3]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="402" name="R1Interlude3" tags="" position="0,0" size="100,100">
@@ -372,93 +365,80 @@
 							[[Tell her you're feeling on-edge|R1Interlude4]]
 							[[Stay silent|R1Interlude4]]
 						</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 					<tw-passagedata pid="403" name="R1Interlude4" tags="" position="0,0" size="100,100">
 						<div class="script">She doesn't even acknowledge you, barrelling on through what's obviously a script.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude5]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="404" name="R1Interlude5" tags="" position="0,0" size="100,100">
 						<div class="hunter">Excellent, excellent! You’ve survived so far, but can you keep up the momentum, especially with our hunters getting ever closer? We’ll find out in round 2!</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude6]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="405" name="R1Interlude6" tags="" position="0,0" size="100,100">
 						<div class="script">As soon as the director calls cut, her plastic smile evaporates and she lights up a cigarette.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude7]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="406" name="R1Interlude7" tags="" position="0,0" size="100,100">
 						<div class="hunter">I’d get running if I was you, Meat.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude8]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="407" name="R1Interlude8" tags="" position="0,0" size="100,100">
 						<div class="script">Though rude, she’s not wrong. You turn from her rolled eyes and jog casually out of the alley and begin down the highway towards the skyscrapers of downtown looming in the distance.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude9]]</span>
 					</tw-passagedata>
 
 					<tw-passagedata pid="408" name="R1Interlude9" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">[KRSCHH--]</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude10]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="409" name="R1Interlude10" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">Round 2 kiddies! The first round had its thrills, chills and spills, Let’s see what Round 2 has in store for us!</div>
 						<img class="reggie" src="images/reggie.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude11]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="410" name="R1Interlude11" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">Probably more thrills and chills but personally, I’m hoping for grills. I’m starved.</div>
 						<img class="chuck" src="images/chuck.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude12]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="411" name="R1Interlude12" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">Haha, just like you to want to light something on fire, Chuck! </div>
 						<img class="reggie" src="images/reggie.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude13]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="412" name="R1Interlude13" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">Anywhoo, round 2 has us move closer to the city center. More people, more buildings, more chances for Maaaaaayheeeeeem!</div>
 						<img class="reggie" src="images/reggie.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude14]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="413" name="R1Interlude14" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">But our contestant better watch out! Our hunters are hot on their tail, and given the bounty they’ve racked up so far, our hunters have PLENTY of incentive to bring them down!</div>
 						<img class="chuck" src="images/chuck.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude15]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="414" name="R1Interlude15" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">But if they use that gorgeous little melon of theirs, they may stay one step ahead of the hounds!</div>
 						<img class="reggie" src="images/reggie.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R1Interlude16]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="416" name="R1Interlude17" tags="" position="0,0" size="100,100">
@@ -466,8 +446,7 @@
 						<div class="announcer big">MAYHEM FOR MONEY!</div>
 						<img class="chuck" src="images/chuck.png" />
 						<img class="reggie" src="images/reggie.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Crimes1]]</span>
 					</tw-passagedata>
 
@@ -477,42 +456,42 @@
 
 					<tw-passagedata pid="500" name="R2Crimes1" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="Arson M">
+							<a href="javascript:void(0)" data-passage="MugBruiser">
+								<div class="crime">
+									<div class="crimeBasics">
+										<div class="crimeName">Mugging</div>
+										<div class="crimeDesc">That tough guy doesn't look so tough.</div>
+									</div>
+									<div class="crimeDeets">
+										<div class="crimeDifficulty">★★</div>
+										<div class="crimeTime">3 minutes</div>
+										<div class="crimePayout">$1000</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:void(0)" data-passage="StealTaco1">
+								<div class="crime">
+									<div class="crimeBasics">
+										<div class="crimeName">Theft</div>
+										<div class="crimeDesc">That taco vendor probably has cash.</div>
+									</div>
+									<div class="crimeDeets">
+										<div class="crimeDifficulty">★</div>
+										<div class="crimeTime">1 minute</div>
+										<div class="crimePayout">$50</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:void(0)" data-passage="BurnTires1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Arson</div>
-										<div class="crimeDesc">Burn down mechanics shop</div>
+										<div class="crimeDesc">Can't be tough starting a grease fire in a mechanic shop.</div>
 									</div>
 									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
+										<div class="crimeDifficulty">★★</div>
 										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
-									</div>
-								</div>
-							</a>
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
-								<div class="crime">
-									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
-									</div>
-									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
-									</div>
-								</div>
-							</a>
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
-								<div class="crime">
-									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
-									</div>
-									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
+										<div class="crimePayout">$2000</div>
 									</div>
 								</div>
 							</a>
@@ -523,17 +502,17 @@
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="501" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="501" name="MugBruiser" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="502" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="502" name="StealTaco1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="503" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="503" name="BurnTires1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -542,42 +521,42 @@
 
 					<tw-passagedata pid="600" name="R2Crimes2" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
+							<a href="javascript:void(0)" data-passage="HateSpeech1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
+										<div class="crimeName">Hate Speech</div>
+										<div class="crimeDesc">You're about to ruin some stranger's day.</div>
 									</div>
 									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
+										<div class="crimeDifficulty">★</div>
 										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
+										<div class="crimePayout">$50</div>
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
+							<a href="javascript:void(0)" data-passage="BreakWindows1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
+										<div class="crimeName">Vandalism</div>
+										<div class="crimeDesc">An awful lot of unbroken windows on this street...</div>
 									</div>
 									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
+										<div class="crimeDifficulty">★</div>
+										<div class="crimeTime">3 minutes</div>
+										<div class="crimePayout">$100</div>
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
+							<a href="javascript:void(0)" data-passage="BurgleApartmentAgain1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
+										<div class="crimeName">Burglary</div>
+										<div class="crimeDesc">Break into an apartment and rid it of its valuables.</div>
 									</div>
 									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
+										<div class="crimeDifficulty">★★★</div>
+										<div class="crimeTime">5 minutes</div>
+										<div class="crimePayout">$6000</div>
 									</div>
 								</div>
 							</a>
@@ -588,17 +567,17 @@
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="601" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="601" name="HateSpeech1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="602" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="602" name="BreakWindows1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="603" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="603" name="BurgleApartmentAgain1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -607,11 +586,24 @@
 
 					<tw-passagedata pid="700" name="R2Crimes3" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
+							<a href="javascript:void(0)" data-passage="MugFam1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
+										<div class="crimeName">Mugging</div>
+										<div class="crimeDesc">That couple with the baby looks rich. And vulnerable.</div>
+									</div>
+									<div class="crimeDeets">
+										<div class="crimeDifficulty">★</div>
+										<div class="crimeTime">2 minutes</div>
+										<div class="crimePayout">$200</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:void(0)" data-passage="Carjack1">
+								<div class="crime">
+									<div class="crimeBasics">
+										<div class="crimeName">Carjacking</div>
+										<div class="crimeDesc">The owner of that really nice car is about to change.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★★★</div>
@@ -620,24 +612,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
+							<a href="javascript:void(0)" data-passage="BombThreat1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
-									</div>
-									<div class="crimeDeets">
-										<div class="crimeDifficulty">★★★★★</div>
-										<div class="crimeTime">2 minutes</div>
-										<div class="crimePayout">$0</div>
-									</div>
-								</div>
-							</a>
-							<a href="javascript:void(0)" data-passage="LoremIpsum">
-								<div class="crime">
-									<div class="crimeBasics">
-										<div class="crimeName">LoremIpsum</div>
-										<div class="crimeDesc">LoremIpsum</div>
+										<div class="crimeName">Harassment</div>
+										<div class="crimeDesc">What's funnier than terrifying a few thousand fans?</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★★★</div>
@@ -653,17 +632,17 @@
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="701" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="701" name="MugFam1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="702" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="702" name="Carjack1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="703" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="703" name="BombThreat1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -672,32 +651,27 @@
 
 					<tw-passagedata pid="800" name="R2Interlude1" tags="" position="0,0" size="100,100">
 						<div class="script">After completing your last objective, you set back out to find more. You do not get far before a camera crew, a reporter and two crew members holding a large box behind approach from around the corner.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude2]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="801" name="R2Interlude2" tags="" position="0,0" size="100,100">
 						<div class="hunter">It’s time for your round 2 BONUS! Complete this simple task for a $1,000,000 bounty boost! That should give you a shot in the arm! And speaking of a shot...</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude3]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="802" name="R2Interlude3" tags="" position="0,0" size="100,100">
 						<div class="script">The crew members haul a person dressed in a prison jumpsuit out of the box. He’s gagged and from the glazed look in his eyes, heavily sedated. The Reporter reaches behind her back and draws a pistol. Spinning it dexterously in her hand, she offers it to you, handle first.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude4]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="803" name="R2Interlude4" tags="" position="0,0" size="100,100">
 						<div class="hunter">Someone was a veeerrry naughty boy, and lucky you! YOU get to dispense some street justice!</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude5]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="804" name="R2Interlude5" tags="" position="0,0" size="100,100">
 						<div class="script">You take the gun hesitantly and stare at it in your shaking hand. What the fuck?!</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude6]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="805" name="R2Interlude6" tags="" position="0,0" size="100,100">
@@ -705,115 +679,98 @@
 							[[Shoot the criminal|R2Interlude7]]
 							[[Refuse to shoot|R2Interlude12]]
 						</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
 					<tw-passagedata pid="806" name="R2Interlude7" tags="" position="0,0" size="100,100">
 						<div class="script">You take a few deep breaths and aim the gun. After a few moments you gather your nerve. Silently reminding yourself that you're only doing this damn show for your family, you pull the trigger.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude8]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="807" name="R2Interlude8" tags="" position="0,0" size="100,100">
 						<div class="script">The recoil thrusts you backwards into the brick wall as the man hits the ground, dead by your hand. As his blood trickles into the gutter, two nearby tiny cannons fire red confetti and an upbeat song plays from nearby speakers.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude9]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="808" name="R2Interlude9" tags="" position="0,0" size="100,100">
 						<div class="hunter">And we have a winner, Folks! That’s another one MILLION buck-a-roos to your Mayhem-omiter (patent pending)!</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude10]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="809" name="R2Interlude10" tags="" position="0,0" size="100,100">
 						<div class="hunter">You are now in the final round and have access to the city center! Lots of banks, Luxury goods and big businesses! Don’t forget those hunters. Good Luck.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude11]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="810" name="R2Interlude11" tags="" position="0,0" size="100,100">
 						<div class="script">With that, the director calls cut and the crew packs up, leaving the body where it fell. You stare at it for probably far too long before towards the city center and begin moving, limbs feeling numb.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude18]]</span>
 					</tw-passagedata>
 
 					<tw-passagedata pid="811" name="R2Interlude12" tags="" position="0,0" size="100,100">
 						<div class="script">You think of your family's disappointed and horrified faces, and for half a second, you wonder if this man's position is your eventual fate...</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude13]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="812" name="R2Interlude13" tags="" position="0,0" size="100,100">
 						<div class="script">You look at the reporter and shake your head, lowering the gun. You can’t do it. The money would be incredible, but... no. Fuck that. Your daughter is probably watching. You’ll find another way to help her.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude14]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="813" name="R2Interlude14" tags="" position="0,0" size="100,100">
 						<div class="script">Nearby speakers you hadn’t noticed play a low tune that drips disappointment.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude15]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="814" name="R2Interlude15" tags="" position="0,0" size="100,100">
 						<div class="hunter">Awww, looks like we have a real party pooper on our hands. How disappointing! Have it your way, then.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude16]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="815" name="R2Interlude16" tags="" position="0,0" size="100,100">
 						<div class="hunter">Either way, you are now in the final round and have access to the city center! Lots of banks, luxury goods and big businesses! Don’t forget those hunters!</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude17]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="816" name="R2Interlude17" tags="" position="0,0" size="100,100">
 						<div class="script">With that, the director calls cut and the crew packs up, hauling the man in the jumpsuit back into his box. You watch as the bus chugs out of sight, before turning and moving towards the city center.</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude18]]</span>
 					</tw-passagedata>
 
 					<tw-passagedata pid="817" name="R2Interlude18" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">[KRSCHH--]</div>
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude19]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="818" name="R2Interlude19" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">We have arrived in the home stretch!</div>
 						<img class="reggie" src="images/reggie.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude20]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="819" name="R2Interlude20" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">Can our fearless contestant secure a strong finish or are they destined to fall at the last hurtle?</div>
 						<img class="reggie" src="images/reggie.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude21]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="820" name="R2Interlude21" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">It could go either way, Regg-o. Our hunters certainly want a piece of that action, and they close in every second. Can they clinch the catch? Or will our contestant secure victory and glory?</div>
 						<img class="chuck" src="images/chuck.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R2Interlude22]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="821" name="R2Interlude23" tags="" position="0,0" size="100,100">
 						<img id="speaker" src="images/speaker.png" />
 						<div class="announcer">Keep watching to find out!</div>
 						<img class="chuck" src="images/chuck.png" />
-						<div id="danger">Danger: <%= dangerLevel %></div>
-						<div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<div id="danger">Danger: <%= dangerLevel %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 						<span class="next">[[Next|R3Crimes1]]</span>
 					</tw-passagedata>
 
@@ -823,11 +780,11 @@
 
 					<tw-passagedata pid="900" name="R3Crimes1" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="BurgTech">
+							<a href="javascript:void(0)" data-passage="BurgleTech1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Burglary</div>
-										<div class="crimeDesc">There's probably valuables in that tech shop</div>
+										<div class="crimeDesc">There's probably valuables in that tech shop.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★</div>
@@ -836,11 +793,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="ArsonRest">
+							<a href="javascript:void(0)" data-passage="BurnFood1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Arson</div>
-										<div class="crimeDesc">They serve spicy food, lets turn up the heat</div>
+										<div class="crimeDesc">Can't handle the heat? Get out of the restaurant kitchen.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★</div>
@@ -849,11 +806,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="ArtGallery">
+							<a href="javascript:void(0)" data-passage="TrashArt1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Property destruction</div>
-										<div class="crimeDesc">Trash a small art gallery</div>
+										<div class="crimeName">Vandalism</div>
+										<div class="crimeDesc">Trash a small art gallery.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★★</div>
@@ -869,17 +826,17 @@
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="901" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="901" name="BurgleTech1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="902" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="902" name="BurnFood1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="903" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="903" name="TrashArt1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -888,11 +845,11 @@
 
 					<tw-passagedata pid="1000" name="R3Crimes2" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="CarJack">
+							<a href="javascript:void(0)" data-passage="CarjackAgain1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Steal a car</div>
-										<div class="crimeDesc">The hunters are closing in, you need some distance</div>
+										<div class="crimeName">Carjacking</div>
+										<div class="crimeDesc">The hunters are closing in and you need some distance.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★</div>
@@ -901,11 +858,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="ArsonHouse">
+							<a href="javascript:void(0)" data-passage="BurnHouse1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Arson</div>
-										<div class="crimeDesc">Burnin' down the house</div>
+										<div class="crimeDesc">I hope that house is insured...</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★</div>
@@ -914,11 +871,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="BankRob">
+							<a href="javascript:void(0)" data-passage="RobBank1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Bank Robbery</div>
-										<div class="crimeDesc">What better place to get money than a Bank? Time for a withdrawl!</div>
+										<div class="crimeName">Robbery</div>
+										<div class="crimeDesc">What better place to get money than from a bank?</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★★★</div>
@@ -934,17 +891,17 @@
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="1001" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1001" name="CarjackAgain1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="1002" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1002" name="BurnHouse1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="1003" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1003" name="RobBank1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
@@ -953,11 +910,11 @@
 
 					<tw-passagedata pid="1100" name="R3Crimes3" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="Museum">
+							<a href="javascript:void(0)" data-passage="Museum1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Museum Demolition</div>
-										<div class="crimeDesc">Destroy irriplacible art and artifacts</div>
+										<div class="crimeName">Vandalism</div>
+										<div class="crimeDesc">Destroy irreplaceable art and artifacts.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★★</div>
@@ -966,11 +923,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="ArsonArp">
+							<a href="javascript:void(0)" data-passage="BurnApartmentAgain1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Arson</div>
-										<div class="crimeDesc">Burn down an appartment building</div>
+										<div class="crimeDesc">Burn down an appartment building.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★</div>
@@ -979,11 +936,11 @@
 									</div>
 								</div>
 							</a>
-							<a href="javascript:void(0)" data-passage="JewelRob">
+							<a href="javascript:void(0)" data-passage="JewelRob1">
 								<div class="crime">
 									<div class="crimeBasics">
-										<div class="crimeName">Jewel Heist</div>
-										<div class="crimeDesc">My Precious! Steal all the pretty gemstones from a jewellery store.</div>
+										<div class="crimeName">Robbery</div>
+										<div class="crimeDesc">Steal all the pretty gemstones from a jewelery store.</div>
 									</div>
 									<div class="crimeDeets">
 										<div class="crimeDifficulty">★★★★★</div>
@@ -999,17 +956,17 @@
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="1101" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1101" name="Museum1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="1102" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1102" name="BurnApartmentAgain1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="1103" name="LoremIpsum" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1103" name="JewelRob1" tags="" position="0,0" size="100,100">
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
