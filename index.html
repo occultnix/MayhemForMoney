@@ -1625,21 +1625,99 @@
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
+					<!-- Tech Burglary -->
 
-					<tw-passagedata pid="901" name="BurgleTech1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="901" name="BurgleTech1" tags="" position="68,9" size="100,100">
+						<div class="script">You approach a small shop, set directly into the wall of a lonely street. The sign reads “Nelly’s Naughting Networking Nook”. After a brief search, you are able to find a spare key hidden under a fake rock and enter in without sounding any alarms. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleTech2]]</span>
 					</tw-passagedata>
-
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="902" name="BurnFood1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="902" name="BurgleTech2" tags="" position="68,9" size="100,100">
+						<div class="script">While there does seem to be some expensive hardware laying around, most is too big to carry out. You are able to find some expensive processors you can take with you, a small amount of cash from the register.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleTech3]]</span>
 					</tw-passagedata>
-
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="903" name="TrashArt1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="903" name="BurgleTech3" tags="" position="68,9" size="100,100">
+						<div class="script">You look at your own busted phone, and wish you had time to set up one of the nice ones here for yourself. Too, bad but yo're on a mission.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R3Crimes2]]</span>
 					</tw-passagedata>
+					<!-- Arson Restaurant -->
 
+					<tw-passagedata pid="904" name="BurnFood1" tags="" position="70,16" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Someone’s cooking up trouble in the city! I wish we were close enough to get a whiff!</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnFood2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="905" name="BurnFood2" tags="" position="70,16" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">This certainly isn't your mom’s cooking, Chuck. Someone added a dash too much of the spicy stuff, and it’s too hot to handle!</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnFood3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="906" name="BurnFood3" tags="" position="70,16" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">I’ll be the judge of that! Let’s see who can take the heat, and who needs to get out of the kitchen.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnFood4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="908" name="BurnFood4" tags="" position="70,16" size="100,100">
+						<div class="script">You approach a small restaurant, looking almost abandoned, but for the back in five minutes sign. Grabbing a rock, you smash the glass doors and enter, moving to the kitchen.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnFood5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="909" name="BurnFood5" tags="" position="70,16" size="100,100">
+						<div class="script">You are quickly able to find a trash can full of used rags from the stovetop, and the grease trap and spill as much junk oil on the ground as you can.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnFood6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="911" name="BurnFood6" tags="" position="70,16" size="100,100">
+						<div class="script">Turning on the gas in the stove and lighting a candle nearby, you leave hastily. A few blocks after you start running, you hear an explosion. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R3Crimes2]]</span>
+					</tw-passagedata>
+					<!-- Art Gallery  -->
+
+					<tw-passagedata pid="912" name="TrashArt1" tags="" position="65,24" size="100,100">
+					<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Art is such a subjective medium, who are we to define what it is or is not art?</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|TrashArt2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="913" name="TrashArt2" tags="" position="65,24" size="100,100">
+					<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">BULLSHIT! Art is pretty, and if it’s not pretty, it’s not art. And I don’t like what I see in that Gallery over there</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|TrashArt3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="914" name="TrashArt3" tags="" position="65,24" size="100,100">
+					<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Everyone’s a critic</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|TrashArt4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="916" name="TrashArt4" tags="" position="65,24" size="100,100">
+						div class="script">You notice a nearby art gallery, featuring an aspiring young artist. There is no security and the door is unlocked. You step inside and briefly look around at what is on display. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|TrashArt5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="917" name="TrashArt5" tags="" position="65,24" size="100,100">
+						div class="script">It seems to be mostly sculptures of some kind or another. It’s not realistic, whatever it is. The curator smiles and begins to walk towards you.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|TrashArt6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="918" name="TrashArt6" tags="" position="65,24" size="100,100">
+						div class="script">Before she can greet, you begin to move from display to display and smash each one in turn. As you leave, you can hear the sculptor weeping over the smashed fruits of his labor.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R3Crimes2]]</span>
+					</tw-passagedata>
 					<!------------------------------------------------------------------->
 					<!--                THIRD ROUND - SECOND SET OF CRIMES             -->
 					<!------------------------------------------------------------------->
@@ -1714,21 +1792,104 @@
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
+					<!-- Carjacking -->
 
-					<tw-passagedata pid="1001" name="CarjackAgain1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1001" name="CarjackAgain1" tags="" position="72,30" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Dude, where's my car? It used to be your car, and now it’s not.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|CarjackAgain2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1002" name="CarjackAgain2" tags="" position="72,30" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">To be fair, I do think the contestant needs it more. That guy likely isn't being hunted.</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|CarjackAgain3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1003" name="CarjackAgain3" tags="" position="72,30" size="100,100">
+						<div class="script">What you need now is speed more than money. You check a few car doors before you find one that was left unlocked. You know how to run a basic hotwire, and soon your new vehicle is taking you away from your pursuers at a blistering pace.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R3Crimes3]]</span>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
+					<!-- Burning down the house -->
 
-					<tw-passagedata pid="1002" name="BurnHouse1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1005" name="BurnHouse1" tags="" position="74,19" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">A fireplace can bring much needed warmth to any home. But warmth can be too much.</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnHouse2]]</span>
 					</tw-passagedata>
-
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="1003" name="RobBank1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1006" name="BurnHouse2" tags="" position="74,16" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Ridiculous, there’s no such thing as too much flame!</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnHouse3]]</span>
 					</tw-passagedata>
+					<tw-passagedata pid="1007" name="BurnHouse3" tags="" position"74,19" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">I bet someone could try to debate you on that, but I won’t because I think you’re spot on. Burn Baby Burn.</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnHouse4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1008" name="BurnHouse4" tags="" position"74,19" size="100,100">
+						<div class="script">Whoever lives here is about to be very unlucky. With no clear entry point, you decide to go old fashion. A quick shoplifting from the gas station yields you a few gallons of gas and liquor bottles.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnHouse5]]</span>	
+					</tw-passagedata>
+					<tw-passagedata pid="1009" name="BurnHouse5" tags="" position"74,19" size="100,100">
+						<div class="script">After adding some old socks as a wick, you find yourself with a few molotov cocktails that you throw through ground floor windows. You look over your shoulder as you flee. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnHouse6]]</span>	
+					</tw-passagedata>
+					<tw-passagedata pid="1010" name="BurnHouse6" tags="" position"74,19" size="100,100">
+						<div class="script">After adding some old socks as a wick, you find yourself with a few molotov cocktails that you throw through ground floor windows. You look over your shoulder as you flee. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R3Crimes3]]</span>	
+					</tw-passagedata>
+					<!-- Bank Robery -->
 
+					<tw-passagedata pid="1011" name="RobBank1" tags="" position="80,21" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Reach for the sky, it’s a stick up! Party crash, snatch the cash, then make a dash! </div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|RobBank2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1012" name="RobBank2" tags="" position="80,21" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Couldn’t have put it more eloquently myself, old chum! Banks are certainly tempting targets, but they know that too. </div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|RobBank3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1013" name="RobBank3" tags="" position="80,21" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">After what they’ve been through so far, I’m certain our contestant has the gumption to take the prize. Let’s just hope they don’t take too long to get there. </div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|RobBank4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1014" name="RobBank3" tags="" position="80,21" size="100,100">
+						<div class="script">Money is the goal and what better place than a bank? You spend several hours scoping out the security measures, guard rotations and examining the layout.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|RobBank4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1015" name="RobBank4" tags="" position="80,21" size="100,100">
+						<div class="script">When you are ready, you burst into the bank, armed and not taking no for an answer.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|RobBank5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1016" name="RobBank5" tags="" position="80,21" size="100,100">
+						<div class="script">Knowing their money is insured and to keep their customers safe, the bank quickly hands over a large bag of money, and you retreat before the hunters can zero in on the reports of an ongoing bank heist.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R3Crimes3]]</span>
+					</tw-passagedata>
 					<!------------------------------------------------------------------->
 					<!--                 THIRD ROUND - THIRD SET OF CRIMES             -->
 					<!------------------------------------------------------------------->
@@ -1803,19 +1964,104 @@
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
+					<!-- Museum -->
 
-					<tw-passagedata pid="1101" name="Museum1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1101" name="Museum1" tags="" position="88,13" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Museums always bored me. Why should I care about some stupid stuff that some other person made or woned forever ago? </div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Museum2]]</span>
 					</tw-passagedata>
-
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="1102" name="BurnApartmentAgain1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1102" name="Museum2" tags="" position="88,13" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Come on Chuck, these paintings were made by the most skilled artists of their day and age, some of those objects were wielded by Kings and Generals of old and... </div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Museum3]]</span>
 					</tw-passagedata>
-
+					<tw-passagedata pid="1103" name="Museum3" tags="" position="88,13" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">See, this is what I’m talking about. I’m falling asleep just listening to you. Maybe our contestant can add some excitement to this </div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Museum4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1104" name="Museum4" tags="" position="88,13" size="100,100">
+						<div class="script">As you stride down the hall of paintings, you give a brief thought to how most of this is probably completely irreplaceable. Then you think of how much that will post your score.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Museum5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1105" name="Museum5" tags="" position="88,13" size="100,100">
+						<div class="script">You walk under the velvet ropes separating the public from the paintings. You punch holes in the canvas, slash them with your house keys, and even smash one over a guard’s head.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Museum6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1106" name="Museum6" tags="" position="88,13" size="100,100">
+						<div class="script">As the museum alarms begin to ring, you make haste away before the hunters hear you or trace the signal.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|Outro1]]</span>
+					</tw-passagedata>
 					<!-- LoremIpsum -->
 
-					<tw-passagedata pid="1103" name="JewelRob1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="1107" name="BurnApartmentAgain1" tags="" position="95,28" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">A fire is always better with company, why not share it with all your neighbors?</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnApartmentAgain2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1108" name="BurnApartmentAgain2" tags="" position="95,28" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">The contestant is so considerate, it warms my heart.</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnApartmentAgain3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1109" name="BurnApartmentAgain3" tags="" position="95,28" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">I can tell it warms the city’s too. This should keep the whole block warm. They’ll save a bundle on heating bills.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnApartment4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1110" name="BurnApartmentAgain4" tags="" position="95,28" size="100,100">
+						<div class="script">Waiting for someone to enter a nearby apartment complex, you follow behind as the door is still open. You make your way to the basement where the furnace is located. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnApartmentAgain5]]</span>
+					</tw-passagedata>
+							
+					<!-- LoremIpsum -->
+
+					<tw-passagedata pid="1111" name="JewelRob1" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Gems, Glitz and Glamour. Is there anything that says "I have more money than you" like a big Gem?</div>
+						<img class="reggie" src="images/reggie.png" />
+						<span class="next">[[Next|JewelRob2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1112" name="JewelRob2" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">There's nothing quite like it Reggie, which is why this will be a tough nut to crack.</div>
+						<img class="chuck" src="images/chuck.png" />
+						<span class="next">[[Next|JewelRob3]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1113" name="JewelRob3" tags="" position="0,0" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">ery true, very true, Darling. Those cameras and glass aren't for show. It's going to take some time and planning to get through the hard shell to get the sweet rewards.</div>
+						<img class="reggie" src="images/reggie.png" />
+						<span class="next">[[Next|JewelRob4]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1114" name="JewelRob4" tags="" position="0,0" size="100,100">
+						<div class="script">You may be many things, stupid is not one of them. You take your time gathering materials for this job. It's still a smash and grab, but you need glass cutters, drills, and some bolt cutters.</div>
+						<span class="next">[[Next|JewelRob5]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1115" name="JewelRob5" tags="" position="0,0" size="100,100">
+						<div class="script">After stealing them from a nearby hardware store, you make your move. Your preparations took time, but it pays off in the long run as you are able to break into the display cases much faster than if you had rushed in blindly.</div>
+						<span class="next">[[Next|JewelRob6]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="1116" name="JewelRob6" tags="" position="0,0" size="100,100">
+						<div class="script">You stay as long as you feel you can afford before leaving, not clearing them out, but still with a large stash of stolen gemstones.</div>
+						<span class="next">[[Next|Outro1]]</span>
 					</tw-passagedata>
 
 					<!------------------------------------------------------------------->
