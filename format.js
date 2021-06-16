@@ -155,8 +155,6 @@ function timeAdjust(crimeLoc, crimeTime, doMove) {
 			}
 		}
 	}
-
-	console.log("Final danger level is " + dangerManager());
 }
 
 // Figure out the angle of the distance from character to their goal
@@ -176,15 +174,14 @@ function moveChar(char, goal, spd) {
 	}
 }
 
-function testDanger(chance) {
-	let rand = Math.random() * 100;
-
-	if (chance > rand) {
-
-	} else {
-		captureChance += 40;
-	}
-}
+// Basically dangerDanger without moving anybody
+//function testDanger(chance) {
+//	let rand = Math.random() * 100;
+//	if (chance > rand) {
+//	} else {
+//		captureChance += 40;
+//	}
+//}
 
 function dangerDanger(chance) {
 	let rand = Math.random() * 100;
