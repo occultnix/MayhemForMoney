@@ -31,22 +31,24 @@ body {
   position: fixed;
 }
 
-#game-window .next {
+#game-window .next, .hidden {
   display: none;
 }
 
 #danger {
-  margin-top: 675px;
-  margin-left: 100px;
-  float: left;
+  position: fixed;
+  bottom: 10px;
+  left: 200px;
   color: #BFBFBF;
+  opacity: 0.6;
 }
 
 #bounty {
-  margin-top: 675px;
-  margin-right: 200px;
-  float: right;
+  position: fixed;
+  bottom: 10px;
+  right: 300px;
   color: #BFBFBF;
+  opacity: 0.6;
 }
 
 #game-window .announcer {
@@ -128,12 +130,11 @@ body {
 
 #game-window .script {
     width: 700px;
-    height: 185px;
     display: flex;
     align-items: center;
-    margin-top: 260px;
+    margin-top: 365px;
     margin-left: 70px;
-    padding: 5px 15px 10px 15px;
+    padding: 8px 15px 10px 15px;
     font-size: 18px;
     color: #666;
     background-color: #E0DEE5;
@@ -141,22 +142,53 @@ body {
     z-index: 99;
 }
 
-#game-window .hunter {
+#game-window .ending {
     width: 700px;
-    height: 85px;
-    margin-top: 500px;
-    margin-left: 35px;
-    padding: 5px 15px 10px 15px;
+    margin-top: 150px;
+    margin-left: 70px;
+    padding: 8px 15px 10px 15px;
     font-size: 18px;
     color: #666;
-    background-color: #B6ACD2;
+    background-color: #E0DEE5;
     position: relative;
     z-index: 99;
 }
 
+.credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-window .hunter {
+    width: 700px;
+    height: 85px;
+    margin-top: 450px;
+    margin-left: 35px;
+    padding: 5px 15px 10px 15px;
+    font-size: 18px;
+    color: #666;
+    background-color: #BFBFBF;
+    position: relative;
+    z-index: 99;
+}
+
+.hunterimg {
+  position: fixed;
+  bottom: 75px;
+  right: 65px;
+}
+
+#game-window .bountyOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 #game-window .bountyOption a {
   margin-left: 70px;
-  width: 150px;
+  height: 65px;
+  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;

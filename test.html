@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>Mayhem For Money</title>
+		<link rel="stylesheet" href="css/ui.css" />
+		<link rel="stylesheet" href="css/normalize.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="game-window">
+				<tw-story tags></tw-story>
+				<tw-storydata name="test" startnode="1" creator="Twine" creator-version="2.3.14" ifid="4803BE1A-73D8-4022-B367-B015EDAF7B64" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden>
+					<style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style>
+					<script role="script" id="twine-user-script" type="text/twine-javascript"></script>
+					<tw-passagedata pid="1" name="Intro" tags="" position="0,0" size="100,100">
+						<% bountyTotal = 1000 %>
+						<% bountyTotal -= bountyTotal / 10 %>
+						<% console.log(bountyTotal) %>
+
+					</tw-passagedata>
+					<tw-passagedata pid="2" name="RamonEnc" tags="" position="0,0" size="100,100">
+						MWAHAHA RAMON
+					</tw-passagedata>
+					<tw-passagedata pid="3" name="ViperEnc" tags="" position="0,0" size="100,100">
+						MUAHAHA VIPER
+					</tw-passagedata>
+					<tw-passagedata pid="4" name="ALT" tags="" position="0,0" size="100,100">
+						bleh safety
+					</tw-passagedata>
+				</tw-storydata>
+			</div>
+		</div>
+		<script src="js.js"></script>
+		<script src="format.js"></script>
+	</body>
+</html>
