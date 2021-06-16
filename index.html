@@ -1227,15 +1227,31 @@
 						<span class="next">[[Next|BurgleTech2]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="902" name="BurgleTech2" tags="" position="68,9" size="100,100">
-						<div class="script">You approach a small shop, set directly into the wall of a lonely street. The sign reads “Nelly’s Naughting Networking Nook”. After a brief search, you are able to find a spare key hidden under a fake rock and enter in without sounding any alarms. </div>
+						<div class="script">While there does seem to be some expensive hardware laying around, most is too big to carry out. You are able to find some expensive processors you can take with you, a small amount of cash from the register.</div>
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
-						<span class="next">[[Next|BurgleTech2]]</span>
+						<span class="next">[[Next|BurgleTech3]]</span>
 					</tw-passagedata>
-					<!-- LoremIpsum -->
-
-					<tw-passagedata pid="902" name="BurnFood1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="903" name="BurgleTech3" tags="" position="68,9" size="100,100">
+						<div class="script">You look at your own busted phone, and wish you had time to set up one of the nice ones here for yourself. Too, bad but yo're on a mission.</div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|R3Crimes2]]</span>
 					</tw-passagedata>
+					<!-- Arson Restaurant -->
 
+					<tw-passagedata pid="904" name="BurnFood1" tags="" position="70,16" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Someone’s cooking up trouble in the city! I wish we were close enough to get a whiff!</div>
+						<img class="chuck" src="images/chuck.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnFood2]]</span>
+					</tw-passagedata>
+					<tw-passagedata pid="905" name="BurnFood2" tags="" position="70,16" size="100,100">
+						<img id="speaker" src="images/speaker.png" />
+						<div class="announcer">Someone’s cooking up trouble in the city! I wish we were close enough to get a whiff!</div>
+						<img class="reggie" src="images/reggie.png" />
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurnFood3]]</span>
+					</tw-passagedata>
 					<!-- LoremIpsum -->
 
 					<tw-passagedata pid="903" name="TrashArt1" tags="" position="0,0" size="100,100">
