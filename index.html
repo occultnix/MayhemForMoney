@@ -1219,11 +1219,18 @@
 						<div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
-					<!-- LoremIpsum -->
+					<!-- Tech Bruglary -->
 
-					<tw-passagedata pid="901" name="BurgleTech1" tags="" position="0,0" size="100,100">
+					<tw-passagedata pid="901" name="BurgleTech1" tags="" position="68,9" size="100,100">
+						<div class="script">You approach a small shop, set directly into the wall of a lonely street. The sign reads “Nelly’s Naughting Networking Nook”. After a brief search, you are able to find a spare key hidden under a fake rock and enter in without sounding any alarms. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleTech2]]</span>
 					</tw-passagedata>
-
+					<tw-passagedata pid="902" name="BurgleTech2" tags="" position="68,9" size="100,100">
+						<div class="script">You approach a small shop, set directly into the wall of a lonely street. The sign reads “Nelly’s Naughting Networking Nook”. After a brief search, you are able to find a spare key hidden under a fake rock and enter in without sounding any alarms. </div>
+						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
+						<span class="next">[[Next|BurgleTech2]]</span>
+					</tw-passagedata>
 					<!-- LoremIpsum -->
 
 					<tw-passagedata pid="902" name="BurnFood1" tags="" position="0,0" size="100,100">
