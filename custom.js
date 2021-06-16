@@ -121,7 +121,8 @@ function timeAdjust(crimeLoc, crimeTime, doMove) {
 			moveChar(tempChip, playerLastLoc, chipSpeed);
 			if (currentRound > 1) {
 				moveChar (tempRamon, playerLastLoc, ramonSpeed);
-			};if (currentRound > 1) {
+			};
+			if (currentRound > 2) {
 				moveChar (tempViper, playerLastLoc, viperSpeed);
 			};
 
@@ -194,7 +195,7 @@ function dangerDanger(chance) {
 		var chipDist = checkDistance(playerLoc, chipLoc);
 		var ramonDist = checkDistance(playerLoc, ramonLoc);
 		var viperDist = checkDistance(playerLoc, viperLoc);
-		var closest = Math.min(ramonDist, viperDist);
+		var closest = Math.min(chipDist, ramonDist, viperDist);
 
 		// Find the appropriate Hunter's encounter page and send the player there
 		switch (closest) {
