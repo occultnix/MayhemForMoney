@@ -11,7 +11,7 @@
 		<div id="container">
 			<div id="game-window">
 				<tw-story tags></tw-story>
-				<tw-storydata name="test" startnode="23" creator="Twine" creator-version="2.3.14" ifid="4803BE1A-73D8-4022-B367-B015EDAF7B64" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden>
+				<tw-storydata name="test" startnode="24" creator="Twine" creator-version="2.3.14" ifid="4803BE1A-73D8-4022-B367-B015EDAF7B64" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden>
 					<style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style>
 					<script role="script" id="twine-user-script" type="text/twine-javascript"></script>
 
@@ -157,7 +157,7 @@
 
 					<tw-passagedata pid="100" name="R1Crimes1" tags="" position="0,0" size="100,100">
 						<div class="crimes">
-							<a href="javascript:void(0)" data-passage="Graffiti1">
+							<a href="javascript:void(0)" data-passage="Graffiti1" id="R1C1">
 								<div class="crime">
 									<div class="crimeBasics">
 										<div class="crimeName">Vandalism</div>
@@ -197,6 +197,30 @@
 								</div>
 							</a>
 						</div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Vandalism')) {
+									timeAdjust([TODO:R1C1-1], 2, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('Graffiti1') }
+								} else if ($(this).text().includes('Burglary')) {
+									timeAdjust([TODO:R1C1-2], 5, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurgleApartment1') }
+								} else if ($(this).text().includes('Robbery')) {
+									timeAdjust([TODO:R1C1-3], 2, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('TheftHotDog1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
@@ -233,7 +257,6 @@
 						<span class="next">[[Next|Graffiti6]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="106" name="Graffiti6" tags="" position="0,0" size="100,100">
-						<% timeAdjust([12, 12], 2, true) %>
 						<% bountyTotal += 500 %>
 						<div class="script">Altering a public space to match the flow of your emotions and desires makes you feel powerful. You imagine whoever owns this building will be less thrilled. Oh well.</div>
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
@@ -280,7 +303,6 @@
 						<span class="next">[[Next|BurgleApartment7]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="113" name="BurgleApartment7" tags="" position="0,0" size="100,100">
-						<% timeAdjust([24,24], 5, true) %>
 						<% bountyTotal += 6000 %>
 						<div class="script">You try not to look at the bedside pictures, but you catch a glimpse of two children in them anyways. Your heart pangs as you make it back to the window.</div>
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
@@ -320,7 +342,6 @@
 						<span class="next">[[Next|TheftHotDog6]]</span>
 					</tw-passagedata>
 					<tw-passagedata pid="119" name="TheftHotDog6" tags="" position="0,0" size="100,100">
-						<% timeAdjust([TODO], 2, true) %>
 						<% bountyTotal += 700 %>
 						<div class="script">His eyes grow sad as he realizes his net loss for the day. At least you didn’t have to coerce him?</div>
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
@@ -381,6 +402,30 @@
 								</div>
 							</a>
 						</div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Vandalism')) {
+									timeAdjust([TODO:R1C2-1], 2, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('KeyCars1') }
+								} else if ($(this).text().includes('Arson')) {
+									timeAdjust([TODO:R1C2-2], 4, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurnRestaurant1') }
+								} else if ($(this).text().includes('Robbery')) {
+									timeAdjust([TODO:R1C2-3], 2, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('TheftGrocery1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
@@ -568,6 +613,30 @@
 								</div>
 							</a>
 						</div>
+						<% $(function() {
+							$(this).on('click', 'a', function(event) {
+								if ($(this).text().includes('Theft')) {
+									timeAdjust([TODO:R1C3-1], 1, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('StealFood1') }
+								} else if ($(this).text().includes('Mugging')) {
+									timeAdjust([TODO:R1C3-2], 3, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('MugWoman1') }
+								} else if ($(this).text().includes('Arson')) {
+									timeAdjust([TODO:R1C3-3], 5, true);
+									if (chipEncounter == true) { story.show('Chip1') }
+									else if (ramonEncounter == true) { story.show('Ramon1') }
+									else if (viperEncounter == true) { story.show('Viper1') }
+									else { story.show('BurnApartment1') }
+								}
+								event.stopPropagation();
+							});
+						}) %>
 						<div id="danger">Danger: <%= dangerManager() %></div><div id="bounty">Bounty: $<%= bountyTotal %></div>
 					</tw-passagedata>
 
