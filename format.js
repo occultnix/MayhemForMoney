@@ -1,5 +1,5 @@
 let currentRound = 1;
-let currentSet = 2;
+let currentSet = 1;
 
 let bountyTotal = 0;
 
@@ -199,7 +199,7 @@ function dangerDanger(chance) {
 		// Find the appropriate Hunter's encounter page and send the player there
 		switch (closest) {
 			case chipDist:
-				ramonEncounter = true;
+				chipEncounter = true;
 				break;
 			case ramonDist:
 				ramonEncounter = true;
@@ -213,11 +213,12 @@ function dangerDanger(chance) {
 	}
 }
 
+// Intake the type of escape and the percent chance of escape
 function escapeChance(type, chance) {
-	let rand = Math.random() * 100;
+	let rand = Math.random() * 100;		// Set up a random number 0 - 100
 
-	if (chance >= rand) {
-		switch (type) {
+	if (chance >= rand) {							// If your percentage chance is higher than the random number
+		switch (type) {									// Set the type of escape success variable to true
 			case 'bribe':
 				bribeSuccess = true;
 				break;
